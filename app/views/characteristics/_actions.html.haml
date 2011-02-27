@@ -1,0 +1,7 @@
+= f.label :content, "Action"
+= f.text_field :content
+= f.check_box :_destroy
+= f.label :_destroy, "Remove Action"
+%br
+- f.fields_for :sub_actions do |builder|
+  = render 'sub_actions', :f => builder

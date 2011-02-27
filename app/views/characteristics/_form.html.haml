@@ -10,11 +10,7 @@
     = f.label :content, "Characteristic Type"
     = f.text_field :content
     %br
-    - f.fields_for :actions do |action|
-      = action.label :content, "Action"
-      = action.text_field :content
-      = action.check_box :_destroy
-      = action.label :_destroy, "Remove Action"
-      %br
+    - f.fields_for :actions do |builder|
+      = render 'actions', :f => builder
   .actions
     = f.submit 'Save'

@@ -25,7 +25,10 @@ class CharacteristicsController < ApplicationController
   # GET /characteristics/new.xml
   def new
     @characteristic = Characteristic.new
-    3.times { @characteristic.actions.build }
+    4.times do
+      action = @characteristic.actions.build
+      5.times { action.sub_actions.build }
+    end
 
     respond_to do |format|
       format.html # new.html.erb
