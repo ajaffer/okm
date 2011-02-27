@@ -7,7 +7,14 @@
           %li= msg
 
   .field
-    = f.label :content
+    = f.label :content, "Characteristic Type"
     = f.text_field :content
+    %br
+    - f.fields_for :actions do |action|
+      = action.label :content, "Action"
+      = action.text_field :content
+      = action.check_box :_destroy
+      = action.label :_destroy, "Remove Action"
+      %br
   .actions
     = f.submit 'Save'

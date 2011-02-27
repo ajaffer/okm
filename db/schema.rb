@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110227045035) do
+ActiveRecord::Schema.define(:version => 20110227045945) do
+
+  create_table "actions", :force => true do |t|
+    t.string   "content"
+    t.integer  "characteristic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "characteristics", :force => true do |t|
     t.string   "content"
