@@ -13,6 +13,11 @@
       %td= link_to 'Show', characteristic
       %td= link_to 'Edit', edit_characteristic_path(characteristic)
       %td= link_to 'Destroy', characteristic, :confirm => 'Are you sure?', :method => :delete
+    %tr
+      %td
+        %ol
+          - for action in characteristic.actions
+            %li= action.content
 
 %br
 
