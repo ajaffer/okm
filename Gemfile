@@ -10,8 +10,11 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'ruby_parser'
 gem 'heroku'
+gem "nifty-generators", :group => :development
+gem "mocha"
 
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0.1" # <---- added this gem
 end
+gem "mocha", :group => :test

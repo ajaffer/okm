@@ -1,5 +1,7 @@
 Okm::Application.routes.draw do
   
+  resources :characteristics
+
   resources :characters
 
   devise_for :users

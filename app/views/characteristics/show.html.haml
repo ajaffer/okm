@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @characteristic.content
+
+= link_to 'Edit', edit_characteristic_path(@characteristic)
+\|
+= link_to 'Back', characteristics_path
